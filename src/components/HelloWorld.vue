@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div id="hello">
        	    <!--scroll-head-->
     <div class="scroll-head"></div>
     <!--top-->
@@ -7,16 +7,16 @@
         <div class="top-info">
             <div class="top-left">
                 <div data-toggle="arrowdown" id="arrow1" class="user-name">
-                    <a href="www.baidu.com">亲，请登录</a>
+                    <a href="#/Login">亲，请登录</a>
                     <span class="down-icon"></span>
                 </div>
                 <div data-toggle="arrowdown" id="arrow2" class="msg-info">
                     <i class="fa fa-envelope fa-gray"></i>
-                    <a href="#">消息</a>
+                    <a  href="http://www.baidu.com">消息</a>
                     <span class="down-icon"></span>
                 </div>
                 <a class="a-float-left" href="#">手机淘宝</a>
-                <img height="34px" a-float-left src="@/../static/img/qqq.gif" />
+              <!--  <img height="34px" a-float-left src="@/../static/img/qqq.gif" />-->
                 <!--hidden-box-->
                 <div data-toggle="hidden-box" id="nav-box1" class="user-box">
                     <img class="my-head" src="@/../static/img/user-head.jpg" />
@@ -231,10 +231,12 @@
             </div>
         </div>
     </div>
+    <div id="app02"></div>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'HelloWorld',
   data () {
@@ -242,10 +244,15 @@ export default {
       msg: 'Welcome to Your Vue.js App'
     }
   }
+  
 }
+
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+/*@import "../assets/css/reset.css"
+@import "../assets/css/style.css"*/
 </style>

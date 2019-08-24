@@ -10,9 +10,9 @@
 				<div class="login-box">
 
 						<div class="am-tabs" id="doc-my-tabs">
-							<ul class="am-tabs-nav am-nav am-nav-tabs am-nav-justify">
+							<ul class="am-tabs-nav am-nav  am-nav-justify">
 							
-								<li><a class="am-active" href="">手机号登录</a></li>
+								<li><a class="am-active" href="">手 机号登录</a></li>
 							</ul>
 
 							<div class="am-tabs-bd">
@@ -82,7 +82,8 @@
 </template>
 
 <script>
-
+   
+  
 
 	export default{
 		name:'Login',

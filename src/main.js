@@ -8,6 +8,8 @@ import resource from 'vue-resource'
 
 Vue.config.productionTip = false
 Vue.use(resource)
+Vue.http.options.emulateJSON = true;
+//Vue.http.options.withCredentials = true;
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

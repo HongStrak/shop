@@ -1,12 +1,12 @@
 <template>
 	<div>
 		<div class="login-boxtitle">
-			<a href="home/demo.html"><img alt="" src="@/../static/images/logobig.png" /></a>
+			
 		</div>
 
 		<div class="res-banner" >
 			<div class="res-main" id="mainapp">
-				<div class="login-banner-bg"><span></span><img src="@/../static/images/big.jpg" /></div>
+			
 				<div class="login-box">
 
 						<div class="am-tabs" id="doc-my-tabs">
@@ -76,7 +76,7 @@
 					</div>
 					</div>
 					<a href="javascript:history.back(-1)">返回上一页</a>
-<router-link to="/Login/test">dd</router-link>
+		<a href="javascript:void(0);" @click="disp()">dd</a>
 		 <router-view></router-view>
 </div>
 </template>
@@ -134,6 +134,9 @@
 					}
 				}
 			)
+		},
+		disp:function(){
+			this.$parent.show11=true;
 		}
 	}
 }</script>

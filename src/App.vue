@@ -1,11 +1,12 @@
 <template>
-  <div id="app">
+	<div>
+  <div id="app" v-show="show11">
     <div class="am-container header">
 			<ul class="message-l">
 				<div class="topMessage">
 					<div class="menu-hd">
 						
-						<router-link to="/Login">亲，请登录</router-link>
+						<a @click="show()" href="#/Login">亲，请登录</a>
 						
 					</div>
 				</div>
@@ -15,7 +16,7 @@
 					<div class="menu-hd"><router-link to="/Home" target="_top" class="h">商城首页</router-link></div>
 				</div>
 				<div class="topMessage my-shangcheng">
-					<div class="menu-hd MyShangcheng"><a href="#" target="_top"><i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
+					<div class="menu-hd MyShangcheng"><a  href="javascript:void(0);"  target="_top"><i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
 				</div>
 				<div class="topMessage mini-cart">
 					<div class="menu-hd"><router-link  to="/Shopcart" ><i class="am-icon-shopping-cart  am-icon-fw"></i><span>购物车</span><strong id="J_MiniCartNum" class="h">0</strong></router-link></div>
@@ -38,8 +39,8 @@
 					</form>
 				</div>
 			</div>
-			<Search :key="timer"></Search>
-    <router-view/>
+			</div>
+    <router-view :key="timer"/>
   </div>
 </template>
 
@@ -54,23 +55,25 @@ export default {
   	return{
   		mess:'',
   		user:{},
-  		timer:''
+  		timer:'',
+  		show11:true
   	}
   },
   created(){
   	console.log();
-//	this.$http.post("http://127.0.0.1:8081/introduction/fun07").then(
-//		function(ret){
-//			this.user=ret.body;
-//			console.log(ret);
-//			
-//		}
-//	)
+	this.$http.post("http://127.0.0.1:8081/introduction/fun07").then(
+		function(ret){
+			this.user=ret.body;
+			console.log(ret);
+			
+		}
+	)
   },
   methods:{
   	
   	search:function(){
   		this.timer=new Date().getTime();
+  		
   		this.$router.push({
   			path:"/Search",
   			query:{
@@ -79,6 +82,10 @@ export default {
   		})
   		
   	},
+  	show:function(){
+  		
+  		this.show11=false
+  	}
   	
   }
 }

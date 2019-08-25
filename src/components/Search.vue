@@ -389,7 +389,6 @@
  	 	}
  	 },
  	 created(){
- 	 	alert("asd");
  	 	console.log(this.$route.query);
  	 	this.gname=this.$route.query.mess;
  	 	this.search();
